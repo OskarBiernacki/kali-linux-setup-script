@@ -145,16 +145,6 @@ rm -rf ~/.vim ~/.vimrc
 - Sets passwordless sudo (security risk on shared systems)
 - Installs unofficial Burp Suite script (use at your own risk)
 
-## Updating the Script
-```bash
-# Download latest version
-wget -O kali_setup.sh https://raw.githubusercontent.com/your-repo/kali-setup/main/kali_setup.sh
-
-# Make executable and run
-chmod +x kali_setup.sh
-./kali_setup.sh
-```
-
 ## License
 MIT License - See LICENSE file for details
 
