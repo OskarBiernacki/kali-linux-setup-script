@@ -38,15 +38,14 @@ print_stage 'Checking user'
 username=$(whoami)
 echo "current user: ${username}"
 if [ "$username" != "kali" ]; then
-    echo 'username is not kali!!!!'
-    exit
+    echo 'username is not kali. Can casue some errors...'
 fi
 
 ####NOPASSWD
-print_stage "Adding sudo NOPASSWD to kali..."
-sudo bash -c 'echo "kali ALL=(ALL:ALL) NOPASSWD: ALL" > /etc/sudoers.d/kali-nopasswd'
+print_stage "Adding sudo NOPASSWD to $username..."
+sudo bash -c 'echo "$username ALL=(ALL:ALL) NOPASSWD: ALL" > /etc/sudoers.d/kali-nopasswd'
 sudo chmod 440 /etc/sudoers.d/kali-nopasswd
-print_success "kali are sudoer with nopasswd"
+print_success "$username are sudoer with nopasswd"
 ####Installing tools
 print_stage "Updating and installing tools..."
 sudo apt update
